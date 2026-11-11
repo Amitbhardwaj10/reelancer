@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { testimonialsData } from "@/data/testimonials";
 import { Heart } from "lucide-react";
 
@@ -58,11 +59,17 @@ export default function TestimonialsSection() {
                 className="p-6 bg-[#0E0E0E] border border-hairline hover:border-lime/40 transition-colors flex flex-col justify-between"
               >
                 <div>
-                  {/* DM Header */}
+                  {/* DM Header with Avatar Image */}
                   <div className="flex items-center justify-between border-b border-hairline pb-3 mb-4">
                     <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 border border-hairline bg-[#161616] flex items-center justify-center font-mono font-bold text-xs text-lime">
-                        {item.avatarInitial}
+                      <div className="relative w-9 h-9 border border-hairline overflow-hidden bg-[#161616] shrink-0">
+                        <Image
+                          src={item.avatarImage}
+                          alt={item.name}
+                          width={36}
+                          height={36}
+                          className="object-cover w-full h-full"
+                        />
                       </div>
                       <div>
                         <div className="font-sans font-bold text-sm text-offwhite leading-tight">

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A1A1A"/>
+      <stop offset="100%" stop-color="#0A0A0A"/>
+    </linearGradient>
+    <linearGradient id="hairGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#333333"/>
+      <stop offset="100%" stop-color="#141414"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="200" height="200" fill="url(#bgGrad)"/>
+  
+  <!-- Grid Matrix -->
+  <line x1="0" y1="50" x2="200" y2="50" stroke="#262626" stroke-width="0.5" stroke-dasharray="2 2"/>
+  <line x1="0" y1="100" x2="200" y2="100" stroke="#262626" stroke-width="0.5" stroke-dasharray="2 2"/>
+  <line x1="0" y1="150" x2="200" y2="150" stroke="#262626" stroke-width="0.5" stroke-dasharray="2 2"/>
+  <line x1="50" y1="0" x2="50" y2="200" stroke="#262626" stroke-width="0.5" stroke-dasharray="2 2"/>
+  <line x1="100" y1="0" x2="100" y2="200" stroke="#262626" stroke-width="0.5" stroke-dasharray="2 2"/>
+  <line x1="150" y1="0" x2="150" y2="200" stroke="#262626" stroke-width="0.5" stroke-dasharray="2 2"/>
+
+  <!-- Minimal Silhouette Portrait with Cinema Framing -->
+  <circle cx="100" cy="82" r="38" fill="url(#hairGrad)" stroke="#4A4A46" stroke-width="1.5"/>
+  <!-- Glasses / Viewfinder visor -->
+  <rect x="74" y="74" width="22" height="13" rx="2" fill="#0A0A0A" stroke="#C6FF3D" stroke-width="1.5"/>
+  <rect x="104" y="74" width="22" height="13" rx="2" fill="#0A0A0A" stroke="#C6FF3D" stroke-width="1.5"/>
+  <line x1="96" y1="80" x2="104" y2="80" stroke="#C6FF3D" stroke-width="1.5"/>
+
+  <!-- Torso & Camera Strap -->
+  <path d="M 40 185 C 40 138, 65 130, 100 130 C 135 130, 160 138, 160 185 Z" fill="#1C1C1C" stroke="#333333" stroke-width="1.5"/>
+  <line x1="72" y1="130" x2="128" y2="185" stroke="#C6FF3D" stroke-width="2.5" stroke-opacity="0.8"/>
+  <circle cx="100" cy="158" r="7" fill="#0A0A0A" stroke="#EDEAE3" stroke-width="2"/>
+
+  <!-- Corner Brackets -->
+  <path d="M 12 24 L 12 12 L 24 12" stroke="#C6FF3D" stroke-width="2" fill="none"/>
+  <path d="M 188 24 L 188 12 L 176 12" stroke="#C6FF3D" stroke-width="2" fill="none"/>
+  <path d="M 12 176 L 12 188 L 24 188" stroke="#C6FF3D" stroke-width="2" fill="none"/>
+  <path d="M 188 176 L 188 188 L 176 188" stroke="#C6FF3D" stroke-width="2" fill="none"/>
+
+  <!-- REC Dot & Tag -->
+  <circle cx="28" cy="28" r="4" fill="#C6FF3D"/>
+  <text x="38" y="32" font-family="monospace" font-size="9" font-weight="bold" fill="#EDEAE3">RAW</text>
+  <text x="145" y="32" font-family="monospace" font-size="9" fill="#8A8A85">NV // 24P</text>
+</svg>

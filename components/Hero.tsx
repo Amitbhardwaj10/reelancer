@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { siteConfig } from "@/data/site";
 import { profileStats } from "@/data/stats";
 import { ArrowUpRight, Play, Eye } from "lucide-react";
@@ -33,10 +34,17 @@ export default function Hero() {
           {/* Left Column: Big Editorial Headline & Pitch */}
           <div className="lg:col-span-7 flex flex-col">
             
-            {/* Creator Profile Stamp */}
+            {/* Creator Profile Stamp with Avatar Image */}
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-9 h-9 rounded-none border border-lime flex items-center justify-center font-mono font-bold text-xs text-lime bg-surface">
-                {siteConfig.name.split(" ").map(n => n[0]).join("")}
+              <div className="relative w-10 h-10 border border-lime overflow-hidden bg-surface shrink-0">
+                <Image
+                  src={siteConfig.avatarImage}
+                  alt={siteConfig.name}
+                  width={40}
+                  height={40}
+                  className="object-cover w-full h-full"
+                  priority
+                />
               </div>
               <div className="flex flex-col">
                 <span className="font-mono text-xs font-bold text-offwhite tracking-wide uppercase">
@@ -100,86 +108,59 @@ export default function Hero() {
 
           </div>
 
-          {/* Right Column: Stacked / Overlapping 3 Vertical Reel Frames */}
+          {/* Right Column: Stacked / Overlapping 3 Vertical Reel Frames with Images */}
           <div className="lg:col-span-5 flex justify-center lg:justify-end pt-4 lg:pt-0">
             <div className="relative w-full max-w-[340px] h-[460px] sm:h-[500px]">
               
               {/* Card 1: Background Left (-3 deg rotation, Frame 01) */}
-              <div className="absolute top-4 left-0 w-[240px] aspect-[9/16] bg-[#0E0E0E] border border-hairline p-3 -rotate-3 transition-transform hover:rotate-0 duration-300 opacity-60 hover:opacity-100 z-10 shadow-xl hidden sm:block">
+              <div className="absolute top-4 left-0 w-[240px] aspect-[9/16] bg-[#0E0E0E] border border-hairline p-1 -rotate-3 transition-transform hover:rotate-0 duration-300 opacity-60 hover:opacity-100 z-10 shadow-xl hidden sm:block overflow-hidden">
                 <div className="bracket-tl" />
                 <div className="bracket-tr" />
                 <div className="bracket-bl" />
                 <div className="bracket-br" />
-                <div className="flex justify-between font-mono text-[9px] text-offwhite-dim mb-2">
-                  <span>FRAME 01/03</span>
-                  <span className="text-lime">00:02:14</span>
-                </div>
-                <div className="w-full h-full bg-gradient-to-b from-neutral-800/40 via-neutral-900/60 to-black flex items-center justify-center text-center p-3">
-                  <span className="font-mono text-[10px] text-offwhite-muted uppercase">
-                    Aura Botanicals • 4.8x ROAS
-                  </span>
+                <div className="relative w-full h-full">
+                  <Image
+                    src="/images/reels/aura-botanicals.svg"
+                    alt="Aura Botanicals Case Study"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
               </div>
 
               {/* Card 2: Background Right (+2.5 deg rotation, Frame 03) */}
-              <div className="absolute top-8 right-0 w-[240px] aspect-[9/16] bg-[#0E0E0E] border border-hairline p-3 rotate-2 transition-transform hover:rotate-0 duration-300 opacity-60 hover:opacity-100 z-10 shadow-xl hidden sm:block">
+              <div className="absolute top-8 right-0 w-[240px] aspect-[9/16] bg-[#0E0E0E] border border-hairline p-1 rotate-2 transition-transform hover:rotate-0 duration-300 opacity-60 hover:opacity-100 z-10 shadow-xl hidden sm:block overflow-hidden">
                 <div className="bracket-tl" />
                 <div className="bracket-tr" />
                 <div className="bracket-bl" />
                 <div className="bracket-br" />
-                <div className="flex justify-between font-mono text-[9px] text-offwhite-dim mb-2">
-                  <span>FRAME 03/03</span>
-                  <span className="text-live font-bold">LIVE</span>
-                </div>
-                <div className="w-full h-full bg-gradient-to-b from-neutral-800/40 via-neutral-900/60 to-black flex items-center justify-center text-center p-3">
-                  <span className="font-mono text-[10px] text-offwhite-muted uppercase">
-                    Véloce • $85k in 18m
-                  </span>
+                <div className="relative w-full h-full">
+                  <Image
+                    src="/images/reels/veloce-streetwear.svg"
+                    alt="Véloce Streetwear Case Study"
+                    fill
+                    className="object-cover"
+                  />
                 </div>
               </div>
 
               {/* Card 3: Main Center Active Card (Frame 02, Viewfinder overlays) */}
-              <div className="relative mx-auto sm:mx-0 sm:left-8 top-0 w-[260px] sm:w-[270px] aspect-[9/16] bg-[#111111] border border-hairline-bright p-4 z-20 shadow-2xl flex flex-col justify-between">
+              <div className="relative mx-auto sm:mx-0 sm:left-8 top-0 w-[260px] sm:w-[270px] aspect-[9/16] bg-[#111111] border border-hairline-bright p-1 z-20 shadow-2xl flex flex-col justify-between overflow-hidden">
                 
                 {/* Viewfinder Corner Brackets */}
-                <div className="bracket-tl" />
-                <div className="bracket-tr" />
-                <div className="bracket-bl" />
-                <div className="bracket-br" />
+                <div className="bracket-tl z-20" />
+                <div className="bracket-tr z-20" />
+                <div className="bracket-bl z-20" />
+                <div className="bracket-br z-20" />
 
-                {/* Top Viewfinder Metadata */}
-                <div className="flex items-center justify-between font-mono text-[10px] text-offwhite-dim border-b border-hairline pb-2">
-                  <div className="flex items-center gap-1.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-lime animate-rec-blink" />
-                    <span className="text-lime font-bold">NOW PLAYING</span>
-                  </div>
-                  <span>00:04:18:12</span>
-                </div>
-
-                {/* Center Dynamic Hook Visual */}
-                <div className="my-auto text-center py-6">
-                  <span className="font-mono text-[9px] text-offwhite-dim tracking-widest uppercase block mb-2">
-                    [HOOK AUDIT]
-                  </span>
-                  <div className="p-3 bg-black/60 border border-hairline mb-3">
-                    <p className="font-sans font-bold text-sm text-offwhite leading-snug">
-                      "Why 82% of DTC brands burn cash on Meta in the first 3 seconds."
-                    </p>
-                  </div>
-                  <div className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-lime/10 border border-lime/30 text-lime font-mono text-[10px] font-bold">
-                    <span>AVG. RETENTION: 68.4%</span>
-                  </div>
-                </div>
-
-                {/* Bottom Reel Audio & Stats Bar */}
-                <div className="pt-2 border-t border-hairline flex items-center justify-between font-mono text-[10px] text-offwhite-muted">
-                  <span className="truncate max-w-[140px] text-offwhite">
-                    Nexus • Terminal Beats
-                  </span>
-                  <span className="text-lime flex items-center gap-1 font-bold">
-                    <Eye className="w-3 h-3" />
-                    840K
-                  </span>
+                <div className="relative w-full h-full">
+                  <Image
+                    src="/images/reels/nexus-cloud-sdk.svg"
+                    alt="Nexus Cloud SDK Case Study"
+                    fill
+                    className="object-cover"
+                    priority
+                  />
                 </div>
 
               </div>

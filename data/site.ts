@@ -14,6 +14,7 @@ export interface SiteConfig {
   bio: string;
   location: string;
   status: string;
+  avatarImage: string;
   timecodeEpoch: string;
   contactEmail: string;
   socials: SocialLink[];
@@ -30,6 +31,7 @@ export const siteConfig: SiteConfig = {
   bio: "Solo operator running creative labs, paid social media buying, and server-side attribution systems. Based worldwide, working on retainers and high-stakes launch sprints.",
   location: "UTC+5:30 • Worldwide",
   status: "REC • ACCEPTING Q1/Q2 SPRINTS",
+  avatarImage: "/images/avatar.svg",
   timecodeEpoch: "00:00:12:08",
   contactEmail: process.env.NEXT_PUBLIC_CONTACT_EMAIL || "nikhil@reelancer.co",
   socials: [

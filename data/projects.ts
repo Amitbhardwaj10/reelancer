@@ -33,6 +33,7 @@ export interface ProjectCaseStudy {
   reelViewsCount: string;
   aspectRatio: "9:16";
   accentHue: string;
+  coverImage: string;
 }
 
 export const projectsData: ProjectCaseStudy[] = [
@@ -88,6 +89,7 @@ export const projectsData: ProjectCaseStudy[] = [
     reelViewsCount: "1.2M",
     aspectRatio: "9:16",
     accentHue: "#C6FF3D",
+    coverImage: "/images/reels/aura-botanicals.svg",
   },
   {
     slug: "nexus-cloud-sdk",
@@ -140,6 +142,7 @@ export const projectsData: ProjectCaseStudy[] = [
     reelViewsCount: "840K",
     aspectRatio: "9:16",
     accentHue: "#C6FF3D",
+    coverImage: "/images/reels/nexus-cloud-sdk.svg",
   },
   {
     slug: "veloce-streetwear",
@@ -192,6 +195,7 @@ export const projectsData: ProjectCaseStudy[] = [
     reelViewsCount: "2.1M",
     aspectRatio: "9:16",
     accentHue: "#C6FF3D",
+    coverImage: "/images/reels/veloce-streetwear.svg",
   },
   {
     slug: "solaris-wealth",
@@ -244,6 +248,7 @@ export const projectsData: ProjectCaseStudy[] = [
     reelViewsCount: "1.7M",
     aspectRatio: "9:16",
     accentHue: "#C6FF3D",
+    coverImage: "/images/reels/solaris-wealth.svg",
   },
   {
     slug: "kinetics-lab",
@@ -296,6 +301,7 @@ export const projectsData: ProjectCaseStudy[] = [
     reelViewsCount: "950K",
     aspectRatio: "9:16",
     accentHue: "#C6FF3D",
+    coverImage: "/images/reels/kinetics-lab.svg",
   },
   {
     slug: "lumina-coffee",
@@ -348,5 +354,6 @@ export const projectsData: ProjectCaseStudy[] = [
     reelViewsCount: "1.9M",
     aspectRatio: "9:16",
     accentHue: "#C6FF3D",
+    coverImage: "/images/reels/lumina-coffee.svg",
   },
 ];

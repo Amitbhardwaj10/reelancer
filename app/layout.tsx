@@ -58,12 +58,21 @@ export const metadata: Metadata = {
     title: `${siteConfig.brandName} • ${siteConfig.role}`,
     description: siteConfig.tagline,
     siteName: siteConfig.brandName,
+    images: [
+      {
+        url: `${siteUrl}/og-image.svg`,
+        width: 1200,
+        height: 630,
+        alt: `${siteConfig.brandName} • ${siteConfig.role}`,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: `${siteConfig.brandName} • ${siteConfig.role}`,
     description: siteConfig.tagline,
     creator: "@reelancer",
+    images: [`${siteUrl}/og-image.svg`],
   },
   robots: {
     index: true,

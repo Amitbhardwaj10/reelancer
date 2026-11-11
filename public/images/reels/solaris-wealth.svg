@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 640" width="360" height="640">
+  <defs>
+    <linearGradient id="solarisBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E1B15"/>
+      <stop offset="50%" stop-color="#09120E"/>
+      <stop offset="100%" stop-color="#040806"/>
+    </linearGradient>
+    <linearGradient id="chartGlow" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#22C55E" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#22C55E" stop-opacity="0.3"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="360" height="640" fill="url(#solarisBg)"/>
+
+  <!-- Corner Brackets -->
+  <path d="M 20 40 L 20 20 L 40 20" stroke="#C6FF3D" stroke-width="2" fill="none"/>
+  <path d="M 340 40 L 340 20 L 320 20" stroke="#C6FF3D" stroke-width="2" fill="none"/>
+  <path d="M 20 600 L 20 620 L 40 620" stroke="#C6FF3D" stroke-width="2" fill="none"/>
+  <path d="M 340 600 L 340 620 L 320 620" stroke="#C6FF3D" stroke-width="2" fill="none"/>
+
+  <!-- Top Telemetry -->
+  <circle cx="36" cy="36" r="4" fill="#C6FF3D"/>
+  <text x="48" y="40" font-family="monospace" font-size="11" font-weight="bold" fill="#EDEAE3">FRAME 04 // FINTECH CPI</text>
+  <text x="260" y="40" font-family="monospace" font-size="11" fill="#C6FF3D">00:16:42:04</text>
+
+  <!-- Interactive Compounding Chart Graphic -->
+  <g transform="translate(30, 110)">
+    <rect width="300" height="270" rx="4" fill="#0C1410" stroke="#1B3326" stroke-width="1.5"/>
+    <text x="16" y="28" font-family="monospace" font-size="10" fill="#22C55E">PORTFOLIO TRAJECTORY: 7.8% APY</text>
+    <text x="16" y="52" font-family="sans-serif" font-weight="bold" font-size="20" fill="#EDEAE3">$340,892.40</text>
+
+    <!-- Grid lines -->
+    <line x1="16" y1="80" x2="284" y2="80" stroke="#1E3A2B" stroke-dasharray="3 3"/>
+    <line x1="16" y1="130" x2="284" y2="130" stroke="#1E3A2B" stroke-dasharray="3 3"/>
+    <line x1="16" y1="180" x2="284" y2="180" stroke="#1E3A2B" stroke-dasharray="3 3"/>
+    <line x1="16" y1="230" x2="284" y2="230" stroke="#1E3A2B"/>
+
+    <!-- Exponential Growth Curve -->
+    <path d="M 20 220 Q 140 210, 200 140 T 280 70 L 280 230 L 20 230 Z" fill="url(#chartGlow)"/>
+    <path d="M 20 220 Q 140 210, 200 140 T 280 70" fill="none" stroke="#C6FF3D" stroke-width="3"/>
+    <!-- Live Pulse Dot on curve -->
+    <circle cx="280" cy="70" r="5" fill="#C6FF3D"/>
+    <circle cx="280" cy="70" r="12" fill="none" stroke="#C6FF3D" stroke-opacity="0.4" stroke-width="1.5"/>
+  </g>
+
+  <!-- Metric Callout -->
+  <rect x="25" y="415" width="310" height="85" fill="#0A0A0A" fill-opacity="0.9" stroke="#C6FF3D" stroke-width="1"/>
+  <text x="40" y="442" font-family="monospace" font-size="10" font-weight="bold" fill="#C6FF3D">[CPI OPTIMIZATION]</text>
+  <text x="40" y="468" font-family="sans-serif" font-size="16" font-weight="bold" fill="#FFFFFF">52,400 Downloads • $3.85 CPI</text>
+  <text x="40" y="488" font-family="monospace" font-size="10" fill="#8A8A85">38.2% 72hr First-Deposit Conversion</text>
+
+  <!-- Audio Waveform -->
+  <g transform="translate(35, 545)">
+    <circle cx="8" cy="8" r="8" fill="#C6FF3D" fill-opacity="0.2"/>
+    <polygon points="6,4 12,8 6,12" fill="#C6FF3D"/>
+    <text x="24" y="12" font-family="monospace" font-size="10" fill="#EDEAE3">Solaris • Smart Compounding Mix</text>
+  </g>
+
+  <!-- Bottom Metric Banner -->
+  <rect x="20" y="570" width="320" height="40" fill="#111" stroke="#262626" stroke-width="1"/>
+  <text x="35" y="594" font-family="monospace" font-size="11" fill="#8A8A85">SCALE METRIC:</text>
+  <text x="130" y="595" font-family="monospace" font-size="14" font-weight="bold" fill="#C6FF3D">52K INSTALLS</text>
+  <text x="245" y="594" font-family="monospace" font-size="11" fill="#EDEAE3">$3.85 CPI</text>
+</svg>

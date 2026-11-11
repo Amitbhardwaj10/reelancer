@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 import { projectsData } from "@/data/projects";
 import { siteConfig } from "@/data/site";
@@ -119,38 +120,20 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
             
             {/* 9:16 Vertical Reel Frame Mockup */}
             <div className="lg:col-span-5 flex justify-center">
-              <div className="w-full max-w-[320px] aspect-[9/16] bg-[#111111] border border-hairline p-5 relative flex flex-col justify-between shadow-2xl">
-                <div className="bracket-tl" />
-                <div className="bracket-tr" />
-                <div className="bracket-bl" />
-                <div className="bracket-br" />
+              <div className="w-full max-w-[320px] aspect-[9/16] bg-[#111111] border border-hairline p-1 relative flex flex-col justify-between shadow-2xl overflow-hidden">
+                <div className="bracket-tl z-20" />
+                <div className="bracket-tr z-20" />
+                <div className="bracket-bl z-20" />
+                <div className="bracket-br z-20" />
 
-                <div className="flex items-center justify-between font-mono text-[10px] text-offwhite-dim border-b border-hairline pb-2">
-                  <span className="text-lime font-bold">REEL BREAKDOWN</span>
-                  <span className="flex items-center gap-1 text-offwhite">
-                    <Eye className="w-3 h-3 text-lime" />
-                    {project.reelViewsCount}
-                  </span>
-                </div>
-
-                <div className="my-auto text-center py-6">
-                  <span className="font-mono text-[10px] text-offwhite-dim uppercase tracking-wider block mb-2">
-                    PRIMARY LIFT
-                  </span>
-                  <div className="font-mono font-bold text-4xl text-lime tracking-tight mb-1">
-                    {project.heroMetric}
-                  </div>
-                  <span className="font-mono text-[10px] text-offwhite-muted block">
-                    {project.client}
-                  </span>
-                </div>
-
-                <div className="pt-2 border-t border-hairline font-mono text-[10px] text-offwhite-muted flex items-center justify-between">
-                  <div className="flex items-center gap-1.5 truncate max-w-[160px]">
-                    <Music2 className="w-3 h-3 text-lime shrink-0" />
-                    <span className="truncate">{project.reelAudioTitle}</span>
-                  </div>
-                  <span className="text-lime font-bold">VERIFIED</span>
+                <div className="relative w-full h-full">
+                  <Image
+                    src={project.coverImage}
+                    alt={project.title}
+                    fill
+                    className="object-cover"
+                    priority
+                  />
                 </div>
               </div>
             </div>
